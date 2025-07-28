@@ -85,6 +85,7 @@ Sempre de forma curta e objetiva!
 
 ## 🛠️ Possíveis Melhorias Futuras
 
+- Atualização do Prompt. (Prompt atual para testes)
 - Agendamento de reunião através do chat (Meet, teams e outros)
 - Scroll automático na janela de mensagens
 - Suporte a múltiplos modelos e seleção dinâmica
