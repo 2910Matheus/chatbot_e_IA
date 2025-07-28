@@ -35,13 +35,13 @@ def iniciar_tela():
 
 def enviar(user_input, limpar_tela, chat_display):
     historico_msg =user_input.get()
-    chat_display.insert(tk.END, historico_msg + '\n')
+    chat_display.insert(tk.END,"Você: " + historico_msg + '\n')
     limpar_tela.delete(0, tk.END)
     resposta_bot(historico_msg, chat_display)
 
 def resposta_bot(historico_msg, chat_display):
     resposta_bot = Ollama(historico_msg)
-    chat_display.insert(tk.END, resposta_bot.chatbot() + '\n')
+    chat_display.insert(tk.END,"Bot: " + resposta_bot.chatbot() + '\n')
 
 
 if __name__ == "__main__":
