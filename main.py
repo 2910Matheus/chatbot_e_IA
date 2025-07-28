@@ -2,6 +2,8 @@ from tkinter import *
 import tkinter as tk
 from model import Ollama
 
+historico_msg = []
+
 # Função principal que cria a interface
 def iniciar_tela():
     window = tk.Tk()
@@ -34,14 +36,17 @@ def iniciar_tela():
 # Função que captura e exibe o texto
 
 def enviar(user_input, limpar_tela, chat_display):
-    historico_msg =user_input.get()
-    chat_display.insert(tk.END,"Você: " + historico_msg + '\n')
+    msg_usuario =user_input.get().strip()
+    chat_display.insert(tk.END,"Você: " + msg_usuario + '\n')
     limpar_tela.delete(0, tk.END)
-    resposta_bot(historico_msg, chat_display)
+    historico_msg.append(f"Você: {msg_usuario}")
+    prompt = "\n".join(historico_msg) + "\nBot: "
+    resposta_bot(prompt, chat_display)
 
-def resposta_bot(historico_msg, chat_display):
-    resposta_bot = Ollama(historico_msg)
-    chat_display.insert(tk.END,"Bot: " + resposta_bot.chatbot() + '\n')
+def resposta_bot(prompt, chat_display):
+    resposta = Ollama(prompt).chatbot()
+    chat_display.insert(tk.END,"Bot: " + resposta + '\n')
+    historico_msg.append(f"Bot: {resposta}")
 
 
 if __name__ == "__main__":
