@@ -1,7 +1,7 @@
 
 # 🗨️ Chat Simples com Interface Tkinter + API Ollama
 
-Este é um projeto de chatbot simples com interface gráfica feita em **Tkinter** que utiliza um modelo de linguagem da API **Ollama** para gerar respostas curtas e em português. Ele é ideal como base para projetos de assistentes pessoais, chatbots de atendimento ou estudos com LLMs locais.
+Este é um projeto de chatbot simples que está em **desenvolvimento** e com intenção de tornar um assistente de reuniões. Possui uma interface gráfica feita em **Tkinter** que utiliza um modelo de linguagem da API **Ollama** para gerar respostas curtas e em português. Ele é ideal como base para projetos de assistentes pessoais, chatbots de atendimento ou estudos com LLMs locais.
 
 ---
 
